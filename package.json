@@ -4,17 +4,18 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://girishwari180.github.io/Agriculture",
-  "scripts": {
-    "dev": "vite --port=3000 --host=0.0.0.0",
-    "build": "vite build",
-    "preview": "vite preview",
-    "test": "vitest run",
-    "clean": "rm -rf dist server.js",
-    "lint": "echo 'Linting complete'",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
-  },
-  "dependencies": {
+ "scripts": {
+  "dev": "vite --port=3000 --host=0.0.0.0",
+  "build": "vite build",
+  "build:gh": "set GITHUB_PAGES=true&& vite build",
+  "preview": "vite preview",
+  "test": "vitest run",
+  "clean": "rm -rf dist server.js",
+  "lint": "echo 'Linting complete'",
+  "predeploy": "npm run build:gh",
+  "deploy": "gh-pages -d dist"
+},
+"dependencies": {
     "@google/genai": "^2.4.0",
     "@tailwindcss/vite": "^4.1.14",
     "@vitejs/plugin-react": "^5.0.4",
